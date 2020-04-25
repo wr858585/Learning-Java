@@ -24,6 +24,6 @@ public class ArrayTest1 {
 		String[] arr3 = new String[5];
 		System.out.println(arr3[0]);
 		//it is a test
-		
+		//test
 	}
 }
