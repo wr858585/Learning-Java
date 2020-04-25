@@ -25,5 +25,7 @@ public class ArrayTest1 {
 		System.out.println(arr3[0]);
 		//it is a test
 		//test
+		//test
+		//test
 	}
 }
