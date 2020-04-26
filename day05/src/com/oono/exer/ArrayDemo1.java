@@ -30,7 +30,7 @@ public class ArrayDemo1 {
 		for (int i = 0; i < num; i++) {
 			if (maxScore < scores[i]) {
 				maxScore = scores[i];
-			}
+			}//3&4可以优化，两个loop合在一起写
 		}
 
 		// 5.获取最高分的差值，转成成绩等级
