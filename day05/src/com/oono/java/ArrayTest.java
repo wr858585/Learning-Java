@@ -51,6 +51,11 @@ public class ArrayTest {
 		适用于我们已知元素内容，直接将array写好到位
 		*/
 		ids = new int[]{1001,1002,1003,1004};
+		//如果要合并，直接写成如下：（一步到位）
+		int[] ids1 = new int[]{1002,1003};//静态
+		int[] ids2 = new int[2];//动态
+		//助记：左边数类都要写清是数组，用[]。区别只有右边长度写不写，ele填不填
+		
 		
 		//1.2 动态初始化
 		String[] names = new String[5];//5为数组长度/ele个数
