@@ -48,6 +48,28 @@ public class ArrayTest2 {
 //		ids = {1001,1002,1003}; 就不行
 //		因为没有声明ids为array，省略new int[]后无法类推
 		
+		//2.如何调用二维数组的ele
+		System.out.println(arr1[0][0]);//1
+		System.out.println(arr2[1][1]);//null
+		
+//		System.out.println(arr3[1][0]); error:java.lang.NullPointerException
+		//因为arr3的子array的长度未指定，所以不能call，万一长度为1而call的index=2呢
+		//solution：在上一行给子array赋值。
+		//i.e arr3[1] = new String[4];
+		
+		//3.获取二维数组的长度
+		System.out.println(arr4.length);//3
+		System.out.println(arr4[0].length);//3
+		
+		//4.traverse two-dimension array
+		for(int i = 0; i < arr1.length; i++){
+			for(int j = 0; j < arr1[i].length; j++){
+				System.out.print(arr1[i][j]);
+			}
+			System.out.println();
+		}
+		
+		
 	}
 	
 }
