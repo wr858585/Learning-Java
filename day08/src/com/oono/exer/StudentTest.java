@@ -34,17 +34,19 @@ public class StudentTest {
 		// stus[i].score);
 		// }
 
-		// 遍历数组
-		// for(int i = 0; i < stus.length; i++){
-		// System.out.println(stus[i].info());
-		// }
+//		 遍历数组
+		 for(int i = 0; i < stus.length; i++){
+		 System.out.println(stus[i].info());
+		 }
+		 System.out.println("*************************");
 
 		// 问题一：打印出三年级学生的学生信息。
-		// for (int i = 0; i < stus.length; i++) {
-		// if (stus[i].year == 3) {
-		// System.out.println(stus[i].info());
-		// }
-		// }
+		 for (int i = 0; i < stus.length; i++) {
+		 if (stus[i].year == 3) {
+		 System.out.println(stus[i].info());
+		 }
+		 }
+		 System.out.println("************************");
 
 		// 问题二：使用冒泡排序按学生成绩进行排序，并遍历所有学生信息。
 		for (int i = 0; i < stus.length - 1; i++) {// 需要n-1个大轮,每轮排出其最大值
@@ -52,9 +54,13 @@ public class StudentTest {
 			for (int j = 0; j < stus.length - 1 - i; j++) {// 需要n-1-i个小轮，
 
 				if (stus[j].score > stus[j + 1].score) {
-					int temp = stus[j].score;
-					stus[j].score = stus[j + 1].score;
-					stus[j + 1].score = temp;
+//					int temp = stus[j].score;
+//					stus[j].score = stus[j + 1].score;
+//					stus[j + 1].score = temp;
+//					这种是错误的，因为光交换了score，那么同学A得到C的成绩！全乱了！！
+					Student temp = stus[j];//temp的数类是Student这个类！才能换
+					stus[j] = stus[j + 1];
+					stus[j + 1] = temp;
 				}
 			}
 		}
