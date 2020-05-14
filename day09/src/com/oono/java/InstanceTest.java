@@ -35,7 +35,7 @@ public class InstanceTest {
 		System.out.println("********************");
 		
 		PhoneMall mall = new PhoneMall();
-		mall.show(new Phone());//
+		mall.show(new Phone());//这里就是直接传了一个匿名var作为形参（实际开发会用）
 		
 	}
 }
