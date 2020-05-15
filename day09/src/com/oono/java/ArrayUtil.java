@@ -89,7 +89,7 @@ public class ArrayUtil {
 		}
 	}
 	
-	//查找指定元素
+	//查找指定元素（线性查找）
 	public void linearSearch(int[] arr, int dest){
 		boolean isFlag = true;
 		for(int i = 0; i < arr.length; i++){
@@ -100,6 +100,34 @@ public class ArrayUtil {
 		}
 		if(isFlag){
 			System.out.println(-1);;
+		}
+	}
+	
+	//查找指定元素（二分查找）
+	public void binarySearch(int[] arr, int dest){
+		int head = 0;
+		int end = arr.length - 1; //head，end均为index。那就必须-1
+//		int middle = (head + end) / 2; 
+//		把middle定义在这里反而是不对的，因为middle每次需要刷新，因为end/head均会刷新
+//		而middle作为平均值，也应该随end/head的更新而更新，所以定义在loop中可以实现
+		boolean isFlag = true;
+		while(head <= end){ //要包括相等的情况
+			
+			//定义middle，每次循环开始的时候刷新新的middle值
+			int middle = (head + end) / 2;
+			
+			if(dest == arr[middle]){ //dest是要与数组的ele相等，而不是index！
+				System.out.println(middle);
+				isFlag = false;
+				break;
+			}else if(dest < arr[middle]){
+				end = middle - 1;
+			}else{ //dest > middle
+				head = middle + 1; 
+			}
+		}
+		if(isFlag){
+			System.out.println(-1);
 		}
 	}
 }
