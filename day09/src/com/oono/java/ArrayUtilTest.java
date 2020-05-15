@@ -36,8 +36,14 @@ public class ArrayUtilTest {
 		//5.测试排序
 		test.bubbleSort(arr);
 		test.traverse(arr);
+		System.out.println("*****************");
 		
 		//6.测试线性查找
 		test.linearSearch(arr, 5);//注意arr已经被排序成{1,2,3,4,5}
+		System.out.println("****************");
+		
+		//7.测试二分查找
+		test.binarySearch(arr, 5);
+		
 	}
 }
