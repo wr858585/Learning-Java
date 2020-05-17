@@ -44,6 +44,13 @@ public class ArrayUtilTest {
 		
 		//7.测试二分查找
 		test.binarySearch(arr, 5);
+		System.out.println("****************");
+
+		//8.测试对调位置
+		test.swap(arr, 0, 4);
+		test.traverse(arr);
+		System.out.println("****************");
+
 		
 	}
 }
