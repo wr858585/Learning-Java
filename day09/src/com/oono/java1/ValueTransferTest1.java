@@ -35,7 +35,7 @@ public class ValueTransferTest1 {
 //		并没有swap成功！
 //		简化理解：基本数类的assign，只是assign its value。
 //		i.e把m&n两个var的值作为实参传入swap方法，交换一下值，完了。
-//		因为swap方法里面的m&n交换了值，但是swap方法一旦完了之后m和n这两个loca var会出栈
+//		因为swap方法里面的m&n交换了值，但是swap方法一旦完了之后m和n这两个local var会出栈
 //		然而main方法中的local var m&n还是原来的值，因为是不同的local var
 		
 	}
