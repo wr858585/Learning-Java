@@ -31,7 +31,7 @@ public class PassObject {
 			//循环的初始条件initial statement可以省略，line28已经交代清楚
 			//且这样可以在循环结束的外面继续使用i（已经变成6）
 			c.radius = i;
-			System.out.println(c.radius + "\t\t" + c.findArea());
+			System.out.println(c.radius + "\t\t" + c.getArea());
 		}
 
 		c.radius = i;
