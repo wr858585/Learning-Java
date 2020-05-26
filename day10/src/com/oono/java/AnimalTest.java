@@ -11,7 +11,7 @@ public class AnimalTest {
 		Animal a = new Animal();
 		a.name = "大黄";
 		a.age = 1;
-//		a.legs = 4; //The field Animal.legs is not visible
+//		a.legs = 4; //The field Animal.legs is not visible 即：私有属性
 		
 		a.show();
 		
