@@ -1,6 +1,6 @@
 package com.oono.java;
 /*
- * OOP的三大特质之一：封装Encapsulation
+ * OOP的三大特质之一：封装Encapsulation(不同于python，Java是硬封装)
  * 
  * 
  */
