@@ -1,5 +1,7 @@
 package com.oono.exer;
-
+/*
+ * 对Person类的封装性进行测试
+ */
 public class PersonTest {
 	public static void main(String[] args) {
 		
