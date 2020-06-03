@@ -11,6 +11,10 @@ package com.oono.java2;
  * 		如：方法的形参和类的field同名，则必须显式地使用this.的方式来表示这里的是field，而非形参
  * 
  * 3. this调用/修饰构造器的说明
+ * 		① 我们在类的构造器中，可以通过this.的方式，显式地来调用其他构造器
+ * 			这样就避免了重复写代码（因为调用吼不需要再去写被调用constructor里面的代码了）
+ * 			注意：这种调用是在同一个类中的constructor可以互相通过this调用
+ * 					因为this关键字意思本来就是指代‘当前对象的’
  * 		
  */
 public class PersonTest {
@@ -26,6 +30,11 @@ class Person{
 	//field
 	String name;
 	int age;
+	
+	//constructor
+	Person(){
+		
+	}
 	
 	//method
 	public void setName(String name){
