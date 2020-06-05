@@ -15,12 +15,15 @@ package com.oono.java2;
  * 			这样就避免了重复写代码（因为调用吼不需要再去写被调用constructor里面的代码了）
  * 			注意：这种调用是在同一个类中的constructor可以互相通过this调用
  * 					因为this关键字意思本来就是指代‘当前对象的’
- * 		
+ * 		② 注意：一定是调用其他constructor，如果写成了call自己则出不去了，一直调自己
+ * 		③ 则同一个类中n个构造器，最多n-1此用this来调用其他构造器
+ * 		④ 规定：this(形参列表)调用其他构造器，必须声明在当前构造器的首行
+ * 		⑤ 用this调用其他构造器，只能同时调一个。否则也不能满足规定④了
  */
 public class PersonTest {
 	public static void main(String[] args) {
 		
-		Person p1 = new Person();
+		Person p1 = new Person(3);
 		
 	}
 }
@@ -33,7 +36,21 @@ class Person{
 	
 	//constructor
 	Person(){
-		
+		this.eat();
+		String info = "Person初始化时需考虑执行的代码，共40行";
+		System.out.println(info);
+	}
+	Person(String name){
+		this();//不是this.Person(); 这种写法变成什么了？ --> 方法
+		this.name = name;
+	}
+	Person(int age){
+		this();
+		this.age = age;
+	}
+	Person(String name, int age){
+		this(name);
+		this.age = age;
 	}
 	
 	//method
@@ -48,6 +65,14 @@ class Person{
 	}
 	public int getAge(){
 		return age;
+	}
+	
+	public void eat(){
+		System.out.println("人吃饭");
+	}
+	
+	public void study(){
+		System.out.println("人学习");
 	}
 	
 }
