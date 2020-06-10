@@ -33,7 +33,7 @@ import com.oono.exer4.Bank;
  * 二、import关键字的使用
  * 1. import：导入。
  * 2. 在源文件中，显式地使用import结构，导入指定报下的类/接口
- * 3. 声明位置：在package下，在class上，如果有多个import则并列写下去（java会自动写好import语句）
+ * 3. 声明位置：在package下，在class上，如果有多个import则并列写下去（有些import语句会自动写，有些手动）
  * 4. 也可以使用xxx.*的方式来表示导入的包/接口中的 所有结构
  * 5. 如果使用的类/接口是java.lang包中定义的，则可以省略import语句结构
  * 6. 如果调用的是current package定义下的类/接口，也可以省略import的语句接口
