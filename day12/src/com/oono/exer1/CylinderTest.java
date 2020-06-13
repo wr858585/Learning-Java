@@ -11,8 +11,12 @@ public class CylinderTest {
 		double volume = cy.findVolome();
 		System.out.println("圆柱的体积为：" + volume);
 		
-		double area = cy.findArea();
-		System.out.println("底面圆的面积：" + area);
+		//没有重写findArea()时
+//		double area = cy.findArea();
+//		System.out.println("底面圆的面积：" + area);
 		
+		//重写findArea()之后
+		double area = cy.findArea();
+		System.out.println("圆柱的表面积：" + area);
 	}
 }

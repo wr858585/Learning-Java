@@ -32,8 +32,14 @@ public class Kids extends Mankind{
 		return yearsOld;
 	}
 	
+	/*
+	 * 修改联系1.2中定义的类Kids，子Kids中重新定义employed()方法
+	 * 覆盖父类ManKind中定义的employed()方法
+	 * 输出“Kids study and do not have jobs."
+	 */
 	
-	
-	
+	public void employed() {
+		System.out.println("Kids study and have no jobs.");
+	}
 	
 }
