@@ -16,9 +16,13 @@ public class Cylinder extends Circle{
 	}
 	
 	public double findVolome(){
-		return findArea() * getLength();
+		return super.findArea() * getLength();//这样就不会调用重写的方法，而是superclass的方法
 	}
 	
+	@Override
+	public double findArea() {//返回圆柱的表面积
+		return Math.PI * getRadius() * getRadius() * 2 + 2 * Math.PI * getRadius() * getLength(); 
+	}
 	
 	
 	
