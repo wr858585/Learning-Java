@@ -25,10 +25,10 @@ public class CheckAccount extends Account{
 	}
 	
 	//method
-	public double getOverdraft(double overdraft){
+	public double getOverdraft(){
 		return overdraft;
 	}
-	public void setOverdraft(){
+	public void setOverdraft(double overdraft){
 		this.overdraft = overdraft;
 	}
 	
@@ -45,6 +45,9 @@ public class CheckAccount extends Account{
 			//下面两行代码一定不能交换先后顺序（想一下逻辑）
 			overdraft -= (amount - getBalance());
 			setBalance(0);
+			//或者写成super.withdraw(getBalance());
+		}else{
+			System.out.println("超过可透支限额");
 			
 		}
 	}
