@@ -27,7 +27,6 @@ public class Customer {
 	}
 	
 	//重写的原则：比较两个对象的实体内容（每个类都可以自己定义需求，比如这个类希望比较两个对象的name和age是否相同）
-	@Override
 	public boolean equals(Object obj){
 		if(this == obj){
 		return true;
@@ -56,6 +55,8 @@ public class Customer {
 		return false;
 	}
 	
-	
+	public String toString(){
+		return "Customer[name = " + name + ", age = " + age + "]";
+	}
 	
 }
