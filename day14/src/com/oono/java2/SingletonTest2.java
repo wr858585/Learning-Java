@@ -26,7 +26,7 @@ class Order{
 	
 	//2.声明当前类对象，没有初始化
 	//4.此对象也需要声明为static的
-	private static Order instance = null;//和饿汉式的单例不同，不在类内部new这个对象
+	private static Order instance = null;//和饿汉式的单例不同，不在类内部new这个对象，=null可以省略
 	
 	//3.声明public、static的返回当前类对象的方法
 	public static Order getInstance(){
