@@ -98,8 +98,8 @@ public class WrapperTest {
 		System.out.println(i1 + 1);//13
 		
 		Float flt1 = new Float(12.3);
-		float f1 = flt.floatValue();
-		System.out.println(f2 + 1);//13.3
+		float f1 = flt1.floatValue();
+		System.out.println(f1 + 1);//13.3
 		
 	}
 	
