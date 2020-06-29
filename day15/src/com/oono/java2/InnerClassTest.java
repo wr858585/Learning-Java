@@ -24,12 +24,25 @@ package com.oono.java2;
  * 4. 关注如下的三个问题
  * 		4.1 如何实例化成员内部类的对象
  * 		4.2 如何在成员内部类种区分调用外部类的结构
- * 		4.3 开发中局部内部类的使用
+ * 		4.3 开发中局部内部类的使用，见《InnerClassTest1》
  * 
  */
 public class InnerClassTest {
 
 	public static void main(String[] args) {
+		
+		//创建Dog实例（静态的成员内部类）：
+		Person.Dog dog = new Person.Dog();
+		dog.show();
+		//创建Bird实例（非静态的成员内部类）：
+		Person p = new Person();
+		Person.Bird bird = p.new Bird();
+		bird.sing();
+		
+		System.out.println();
+		
+		bird.display("黄鹂");
+		
 		
 	}
 	
@@ -37,7 +50,7 @@ public class InnerClassTest {
 
 class Person{
 	
-	String name;
+	String name = "小明";
 	int age;
 	
 	public void eat(){
@@ -46,7 +59,7 @@ class Person{
 	
 	
 	//静态成员内部类
-	abstract static class Dog{
+	static class Dog{
 		String name;
 		int age;
 		
@@ -58,7 +71,7 @@ class Person{
 	}
 	//非静态成员内部类
 	final class Bird{
-		String name;
+		String name = "杜鹃";
 		
 		public Bird(){
 			
@@ -68,6 +81,14 @@ class Person{
 			System.out.println("我是一只小小鸟");
 			Person.this.eat();//调用外部类的非静态方法，
 			//直接this.eat()表示当前对象Bird实例化对象的eat()，是没有的，报错。undefined
+		}
+		
+		public void display(String name){
+			//变量一定不要重名，不然就这么麻烦。不重名直接VAR名放进去sysout，重名就得告诉编译器，调用的具体结构，谁调的
+			System.out.println(name);//打印：此方法的name形参
+			System.out.println(this.name);//打印：内部类的name属性
+			System.out.println(Person.this.name);//打印：外部类的name属性
+//			System.out.println(Person.name);只有Person中的name为静态才能这样调，否则this.表示当前对象的，有了实例才能调
 		}
 	}
 	

@@ -6,5 +6,5 @@ public class SuperClass {
 		System.out.println("SuperClass：北京");
 	}
 	
-	
 }
+
