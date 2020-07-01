@@ -1,5 +1,7 @@
 package com.oono.java;
 
+import java.io.FileInputStream;
+
 import org.junit.Test;
 
 /*
@@ -15,9 +17,19 @@ import org.junit.Test;
  */
 public class FinallyTest {
 	
+	
 	@Test
 	public void test2(){
+		File file = new File("hello.txt");
+		FileInputStream fis = new FileInputStream(file);
 		
+		int data = fis.read();
+		while(data != -1){
+			System.out.println((char)data);
+			data = fis.read()
+		}
+		
+		fis.close();
 	}
 	
 	@Test
