@@ -1,6 +1,9 @@
-package com.oono.java;
+package com.oono.java1;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.junit.Test;
 
@@ -20,16 +23,32 @@ public class FinallyTest {
 	
 	@Test
 	public void test2(){
-		File file = new File("hello.txt");
-		FileInputStream fis = new FileInputStream(file);
-		
-		int data = fis.read();
-		while(data != -1){
-			System.out.println((char)data);
-			data = fis.read()
+		FileInputStream fis = null;
+		try {
+			File file = new File("hello.txt");
+			fis = new FileInputStream(file);
+			
+			int data = fis.read();
+			while(data != -1){
+				System.out.println((char)data);
+				data = fis.read();
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				if(fis != null)//没有加括号也没报错
+				fis.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		
-		fis.close();
 	}
 	
 	@Test

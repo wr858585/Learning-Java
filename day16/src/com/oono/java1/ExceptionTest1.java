@@ -1,4 +1,4 @@
-package com.oono.java;
+package com.oono.java1;
 
 import org.junit.Test;
 
@@ -40,10 +40,15 @@ import org.junit.Test;
  * 5. 常用的异常对象处理的方式：① String getMessage() ② printStackTrace() 更常用，包含了①
  * 6. 在try结构中声明的变量，在出了try结构以后，就不能在被使用（狠正常，因为作用域）
  *    Solution：把变量的声明放在try外面且给一个初始化值，try语句里面只进行赋值。这样一来，出了try语句也能继续使用
+ * 7. try-catch-finally结构可以嵌套
  *    
- * 体会：使用try-catch-finally来处理编译时异常，可以让程序在编译时不再报错，但运行时仍可能报错
+ *    
+ *    
+ * 体会1：使用try-catch-finally来处理编译时异常，可以让程序在编译时不再报错，但运行时仍可能报错
  * 	 	 相当于我们使用try-catch-finally将一个编译时可能出现的异常，延迟到运行时出现
  * 
+ * 体会2：开发中，由于运行时异常比较常见，所以我们通常不针对运行时异常编写try-catch-finally了
+ * 		   针对编译时异常，则我们一定要考虑异常处理
  */
 public class ExceptionTest1 {
 
