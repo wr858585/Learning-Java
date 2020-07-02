@@ -1,4 +1,4 @@
-package com.oono.java;
+package com.oono.java1;
 
 import java.io.File;
 import java.io.FileInputStream;
