@@ -42,6 +42,14 @@ public class Employee {
 		this.salary = salary;
 	}
 	
+	//把重复的结构封装到一个方法中，方便子类调用（否则的话子类的子类Designer是不好调的，没有super.super这种东西）
+	public String getDetails(){
+		return id + "\t" + name + "\t" + age + "\t" + salary;
+	}
 	
+	//重写toString方法，让sysout打印UI中要显示的信息，而非打印出每个对象的地址
+	public String toString(){
+		return getDetails();
+	}
 	
 }

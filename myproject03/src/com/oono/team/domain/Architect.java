@@ -19,5 +19,9 @@ public class Architect extends Designer{
 		this.stock = stock;
 	}
 	
+	//重写toString
+	public String toString(){
+		return getDetails() + "\t架构师\t" + getStatus() + "\t" + getBonus() + "\t" + stock + "\t" + getEquipment().getDescription();
+	}
 	
 }
