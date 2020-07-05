@@ -35,4 +35,12 @@ public class Programmer extends Employee{
 		this.equipment = equipment;
 	}
 
+	//重写toString
+	public String toString(){
+		return super.toString() + "\t程序员\t" + status + "\t\t\t"
+	//把重复的结构封装进功能后（Employee类中），也可以不用super.toString了，直接getDetails()
+				+ equipment.getDescription();
+	//注意，status，equipment都是自定义类，toString方法是地址。所以要么需要重写，要么equipment调用自定义的getDescription方法
+	}
+	
 }
