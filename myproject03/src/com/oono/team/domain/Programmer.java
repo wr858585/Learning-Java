@@ -5,7 +5,7 @@ import com.oono.team.service.Status;
 public class Programmer extends Employee{
 	
 	private int memberId;//开发团队中的id（TID：Team ID）
-	private Status status;//Status是枚举类，之后可以换种写法
+	private Status status = Status.FREE;//Status是枚举类，之后可以换种写法
 	private Equipment equipment;
 	
 	public Programmer(){
@@ -19,7 +19,7 @@ public class Programmer extends Employee{
 	public int getMemberId(){
 		return memberId;
 	}
-	public void setMember(int memberId){
+	public void setMemberId(int memberId){
 		this.memberId = memberId;
 	}
 	public Status getStatus(){

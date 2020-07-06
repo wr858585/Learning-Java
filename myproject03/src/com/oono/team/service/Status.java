@@ -22,4 +22,8 @@ public class Status {
 	}
 	//不用提供setter了，因为NAME是常量
 	
+	public String toString(){
+		return NAME;//不是name，严格区分大小写
+	}
+	
 }
