@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import com.oono.team.domain.Employee;
 import com.oono.team.service.NameListService;
+import com.oono.team.service.TeamException;
 
 /**
  * 对NameListService类的测试	
@@ -20,4 +21,17 @@ public class NameListServiceTest {
 			System.out.println(employees[i]);
 		}
 	}
+	
+	@Test
+	public void testGetEmployee(){
+		NameListService service = new NameListService();
+		int id = 2;
+		try{
+		Employee employee = service.getEmployee(id);
+		System.out.println(employee);
+		}catch(TeamException e){
+			System.out.println(e.getMessage());
+		}
+	}
+	
 }
