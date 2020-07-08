@@ -24,4 +24,8 @@ public class Architect extends Designer{
 		return getDetails() + "\t架构师\t" + getStatus() + "\t" + getBonus() + "\t" + stock + "\t" + getEquipment().getDescription();
 	}
 	
+	//1/2	马化腾	32	18000.0		架构师		15000.0		2000
+	public String getDetailsForTeam(){
+		return getTeamBasicInfo() + "\t架构师\t" + getBonus() + "\t" + stock; 
+	}
 }

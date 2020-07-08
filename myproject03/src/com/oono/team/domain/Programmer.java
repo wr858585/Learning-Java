@@ -43,4 +43,13 @@ public class Programmer extends Employee{
 	//注意，status，equipment都是自定义类，toString方法是地址。所以要么需要重写，要么equipment调用自定义的getDescription方法
 	}
 	
+	public String getTeamBasicInfo(){
+		return memberId + "/" + getId() + "\t" + getName() + "\t" + getAge() + "\t"
+				+ getSalary();
+	}
+	
+	//2/6	任志强	22	6800.0	程序员
+	public String getDetailsForTeam(){
+		return getTeamBasicInfo() + "\t程序员"; 
+	}
 }
