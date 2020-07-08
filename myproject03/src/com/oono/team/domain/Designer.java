@@ -27,4 +27,8 @@ public class Designer extends Programmer{
 		+ getEquipment().getDescription(); 
 	}
 
+	//3/5	雷军		28		10000.0		设计师		5000.0
+	public String getDetailsForTeam(){
+		return getTeamBasicInfo() + "\t设计师\t" + getBonus(); 
+	}
 }
